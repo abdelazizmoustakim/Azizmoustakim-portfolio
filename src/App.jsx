@@ -5,6 +5,7 @@ import Hero from "./Component/Home/Hero.jsx";
 import Footer from "./Component/Footer/Footer";
 import Teachings from "./Pages/Courses/Teachings.jsx";
 import Writing from "./Pages/Writing/Writing.jsx";
+import Subscription from "./Pages/Subscription/Subscription.jsx";
 const App = () => {
   return (
     <Router>
@@ -12,7 +13,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/Teachings" element={<Teachings />} />
-        <Route path="/writing" element={<Writing />} />
+        <Route path="/Writing" element={<Writing />} />
+        <Route path="/Subscription" element={<Subscription />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import ReactTypingEffect from "react-typing-effect";
+import { Link } from 'react-router-dom';
 import { PiBooksDuotone } from "react-icons/pi";
 import { Button } from "@mui/material";
 import { blogPosts, bookPosts } from "../../Index/index"; // Ensure these imports are valid
-import { Link } from "react-router-dom";
 import { FaCalendarAlt } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 
@@ -34,9 +34,33 @@ const Writing = () => {
         <meta name="keywords" content="blogs, software engineering, computer science, technology" />
         <meta name="author" content="Abdelaziz Moustakim" />
       </Helmet>
+      <section className="bg-gray-700 bg-opacity-10 dark:text-gray-200">
+        <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">
+          <div className="flex flex-col items-center lg:items-start space-y-4 text-center lg:text-left">
+            <h1 className="text-4xl font-extrabold leading-tight text-gray-800 dark:text-gray-100 transition-all duration-300 ease-in-out">
+              My email blogging is here! Subscribe now!
+            </h1>
+            <p className="text-lg font-medium text-gray-500 dark:text-gray-300 max-w-lg">
+              Stay updated with our latest posts. Don't miss out on the best content directly to your inbox!
+            </p>
+          </div>
+          
+          {/* Link to Subscription Page with Separate "Subscribe" button */}
+          <div className="mt-6 lg:mt-0">
+            <Link to="/subscription" className="inline-block">
+              <button 
+                className="px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 text-white shadow-lg transform transition-all hover:scale-105 hover:shadow-xl">
+                Subscribe
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
 
       {/* Header Section */}
       <div className="w-full bg-primary bg-opacity-10 p-6 sm:p-4 border-b border-gray-200 dark:border-black">
+      
         <div className="flex flex-col sm:flex-row justify-center items-center">
           <Link
             className="flex items-center text-3xl sm:text-2xl font-bold hover:text-primary transition-all duration-300 p-2"

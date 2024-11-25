@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaGithub, FaEnvelope, FaInstagram, FaTwitter, FaNewspaper } from 'react-icons/fa'; 
 import { SiBuymeacoffee, SiSkillshare, SiFiverr, SiFreelancer } from 'react-icons/si';
 import { TbBrandUpwork } from 'react-icons/tb';
@@ -12,7 +13,31 @@ const Hero = () => {
   const [showProjects, setShowProjects] = useState(false);
 
   return (
+    <div className='bg-gray-50 dark:bg-gray-900 dark:text-white'>
+      <section className="bg-gray-500 bg-opacity-10 dark:text-gray-200">
+        <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">
+          <div className="flex flex-col items-center lg:items-start space-y-4 text-center lg:text-left">
+            <h1 className="text-4xl font-extrabold leading-tight text-gray-800 dark:text-gray-100 transition-all duration-300 ease-in-out">
+              My email blogging is here! Subscribe now!
+            </h1>
+            <p className="text-lg font-medium text-gray-500 dark:text-gray-300 max-w-lg">
+              Stay updated with our latest posts. Don't miss out on the best content directly to your inbox!
+            </p>
+          </div>
+          
+          {/* Link to Subscription Page with Separate "Subscribe" button */}
+          <div className="mt-6 lg:mt-0">
+            <Link to="/subscription" className="inline-block">
+              <button 
+                className="px-8 py-3 text-lg font-semibold rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 text-white shadow-lg transform transition-all hover:scale-105 hover:shadow-xl">
+                Subscribe
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     <div className="min-h-screen flex flex-col items-center bg-gray-50 dark:bg-gray-900 dark:text-white duration-200">
+      
       {/* First Section: Full-Width with Transparent Background */}
       <div className="w-full bg-primary bg-opacity-20 p-10 border-b-[0.5px] border-gray-200 dark:border-black shadow-none">
         {/* Circular Photo */}
@@ -144,6 +169,7 @@ const Hero = () => {
           <p className="text-gray-600 text-lg dark:text-yellow-50">- Arthur C. Clarke</p>
         </div>
       )}
+    </div>
     </div>
   );
 };
