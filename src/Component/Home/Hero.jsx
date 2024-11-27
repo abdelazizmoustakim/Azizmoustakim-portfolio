@@ -25,7 +25,6 @@ const Hero = () => {
             </p>
           </div>
           
-          {/* Link to Subscription Page with Separate "Subscribe" button */}
           <div className="mt-6 lg:mt-0">
             <Link to="/subscription" className="inline-block">
               <button 

@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { MdCheckBoxOutlineBlank } from 'react-icons/md';
+import { IoIosCheckbox } from 'react-icons/io';
 import img from './image.png';
-
 const Subscription = () => {
+  // State to manage the checkbox (checked or unchecked)
+  const [isChecked, setIsChecked] = useState(false);
+  // Toggle function for checkbox
+  const toggleCheckbox = () => {
+    setIsChecked(!isChecked);
+  };
   return (
     <div className="grid grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 dark:bg-gray-900 dark:text-gray-200">
       {/* Left Column - Text and Image */}
       <div className="flex flex-col justify-between items-center lg:items-start space-y-4 mt-20 mb-20">
         <div className="space-y-2 text-center lg:text-left">
           <h2 className="text-5xl font-extrabold leading-tight text-gray-800 dark:text-gray-100 lg:text-5xl">
-            Hi there !
+            Hi there!
           </h2>
           <p className="text-lg font-medium text-gray-600 dark:text-gray-300">
             Subscribe to get the latest tech blogs and news delivered straight to your inbox!
@@ -46,7 +53,6 @@ const Subscription = () => {
             className="w-full p-3 rounded-lg border-2 border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-violet-600" 
           />
         </div>
-
         <div>
           <label htmlFor="email" className="text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
           <input 
@@ -56,19 +62,35 @@ const Subscription = () => {
             className="w-full p-3 rounded-lg border-2 border-gray-300 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-violet-600" 
           />
         </div>
+
+        {/* Checkbox next to the agreement text */}
+        <div className="flex items-center space-x-2 mt-4">
+          {/* The checkbox is controlled by the state */}
+          <input 
+            type="checkbox" 
+            id="terms" 
+            className="hidden" 
+            name="terms" 
+            value="true"
+            checked={isChecked} 
+            onChange={toggleCheckbox}  // Toggle on change
+          />
+          <label htmlFor="terms" className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center">
+            {/* Conditionally render the checkbox icon based on isChecked state */}
+            {isChecked ? <IoIosCheckbox className="mr-2 text-xl" /> : <MdCheckBoxOutlineBlank className="mr-2 text-xl" />}
+            <span>By subscribing, you agree to receive emails with the latest tech blogs and news. We respect your privacy.</span>
+          </label>
+        </div>
+
         <button 
           type="submit" 
           className="w-full p-3 text-sm font-bold tracking-wide uppercase rounded-lg bg-gradient-to-r from-violet-600 to-indigo-600 text-white hover:bg-indigo-700 transition-all"
         >
           Subscribe
         </button>
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">
-          By subscribing, you agree to receive emails with the latest tech blogs and news. We respect your privacy.
-        </p>
       </form>
       <br />
     </div>
   );
 };
-
 export default Subscription;
