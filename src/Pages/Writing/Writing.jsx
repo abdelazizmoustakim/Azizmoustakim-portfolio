@@ -34,7 +34,7 @@ const Writing = () => {
         <meta name="keywords" content="blogs, software engineering, computer science, technology" />
         <meta name="author" content="Abdelaziz Moustakim" />
       </Helmet>
-      <section className="bg-gray-700 bg-opacity-10 dark:text-gray-200">
+      {/* <section className="bg-gray-700 bg-opacity-10 dark:text-gray-200">
         <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">
           <div className="flex flex-col items-center lg:items-start space-y-4 text-center lg:text-left">
             <h1 className="text-4xl font-extrabold leading-tight text-gray-800 dark:text-gray-100 transition-all duration-300 ease-in-out">
@@ -54,7 +54,7 @@ const Writing = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
 
       {/* Header Section */}

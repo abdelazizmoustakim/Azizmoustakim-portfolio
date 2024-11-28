@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <div className='bg-gray-50 dark:bg-gray-900 dark:text-white'>
-      <section className="bg-gray-500 bg-opacity-10 dark:text-gray-200">
+      {/* <section className="bg-gray-500 bg-opacity-10 dark:text-gray-200">
         <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">
           <div className="flex flex-col items-center lg:items-start space-y-4 text-center lg:text-left">
             <h1 className="text-4xl font-extrabold leading-tight text-gray-800 dark:text-gray-100 transition-all duration-300 ease-in-out">
@@ -34,7 +34,7 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     <div className="min-h-screen flex flex-col items-center bg-gray-50 dark:bg-gray-900 dark:text-white duration-200">
       
       {/* First Section: Full-Width with Transparent Background */}
