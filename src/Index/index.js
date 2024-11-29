@@ -22,7 +22,8 @@ import img17 from "./us-israel.avif";
 import img18 from "./nft.png";
 import img19 from "./web3.jpg";
 import img20 from "./ma.png";
-import img21 from "./nft1.webp"
+import img21 from "./nft1.webp";
+import img22 from "./programming.jpg";
 import { formatDistanceToNow } from 'date-fns';
 
 export const PROJECTS = [
@@ -33,14 +34,6 @@ export const PROJECTS = [
     description:
       "A fully functional e-commerce platform featuring product listings, a shopping cart, and secure user authentication.",
     technologies: ["HTML", "CSS", "React", "Node.js", "Tailwind"],
-    link:"https://buyhive1.netlify.app/"
-  },
-  {
-    title: "Sky Cast",
-    image: project2,
-    description:
-      "A weather application providing real-time weather updates and forecasts for various locations.",
-    technologies: ["HTML", "CSS", "Next.js", "Tailwind", "TypeScript"],
     link:"https://buyhive1.netlify.app/"
   },
   {
@@ -56,7 +49,7 @@ export const PROJECTS = [
     image: project4,
     description:
       "A cryptocurrency tracking application offering live data and trends for various digital currencies.",
-    technologies: ["HTML", "CSS", "React", "Chart.js"],
+    technologies: ["HTML", "CSS", "React", "Chart.js", "Redux"],
     link:"https://buyhive1.netlify.app/"
   },
 ];
@@ -65,6 +58,44 @@ export const PROJECTS = [
 
 
 export const blogPosts = [
+  {
+    "date": "29 November 2024",
+    "id": "8",
+    "timeAgo": "",
+    "title": "The Future of Programming in 2025: Emerging Languages to Watch",
+    "content": "As we approach 2025, the programming world is set for significant evolution. New languages are being developed, promising to reshape how we build software in the years to come. In this post, we dive into some of the most exciting and promising future programming languages that are expected to gain mainstream adoption by 2030. These languages could fundamentally change the landscape of development and introduce innovative approaches to coding that may soon define how the next generation of developers work.",
+    "headers": [
+      {
+        "title": "1 - Introduction to Future Programming Languages",
+        "content": "The evolution of programming languages is an ongoing journey, with new languages frequently emerging to address the shortcomings of existing ones. These next-generation languages aim to streamline development, enhance performance, and make coding more accessible to both new and experienced developers alike."
+      },
+      {
+        "title": "2 - The Rise of AI-Integrated Languages",
+        "content": "With the rapid rise of AI and machine learning, new programming languages are being designed to simplify AI integration. These languages prioritize features like advanced data manipulation, AI algorithm deployment, and efficient parallel processing to cater to the growing demand for intelligent applications."
+      },
+      {
+        "title": "3 - Quantum Programming Languages: A Look Ahead",
+        "content": "Quantum computing is no longer a distant dream. As quantum computers become more accessible, specialized programming languages like Q# and Qiskit are paving the way for developers to write code that takes advantage of quantum algorithms. By 2025, expect quantum programming languages to see wider adoption, especially in fields like cryptography and complex simulations."
+      },
+      {
+        "title": "4 - The Impact of Low-Code and No-Code Platforms",
+        "content": "In the coming years, low-code and no-code programming languages will become more prominent. These platforms allow developers and non-developers alike to create complex applications with minimal coding effort. The evolution of these tools could democratize software development, enabling more people to bring their ideas to life without deep technical knowledge."
+      },
+      {
+        "title": "5 - Sustainability and Green Programming Languages",
+        "content": "As the tech world increasingly prioritizes sustainability, programming languages optimized for energy-efficient code execution will become more popular. These languages focus on reducing the carbon footprint of software applications, which will become an essential factor for many developers and organizations in the future."
+      },
+      {
+        "title": "6 - The Need for Multi-Paradigm Languages",
+        "content": "Multi-paradigm programming languages, which combine elements of functional, object-oriented, and procedural programming, will continue to grow in popularity. These languages provide developers with flexibility, enabling them to select the best approach for different tasks while maintaining code readability and maintainability."
+      }
+    ],
+    "links": [
+      { "text": "Top 21 Future Programming Languages 2025 – 2030", "url": "https://pwskills.com/blog/future-programming-languages/" },
+    ],
+    "image": img22
+  },
+  
   {
     "date": "28 November 2024",
     "timeAgo": "",
@@ -1061,14 +1092,8 @@ In this code, \`getServerSideProps\` runs on the server for each request, fetchi
     image: img1 // Replace with your image URL
   },
 ];
-
-
 export const bookPosts = [
-  
 ]
-
-
-
 // Function to calculate the time difference
 blogPosts.forEach(blogPosts => {
   const blogDate = new Date(blogPosts.date); // Convert the string to a Date object
